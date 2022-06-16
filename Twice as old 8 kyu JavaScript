@@ -1,0 +1,22 @@
+// функция узнать сколько лет назад отцу было в два раза лет больше, чем его сыну
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  
+  var twiceAsOldSon = sonYearsOld * 2;
+  var dadHowManyYears = dadYearsOld - twiceAsOldSon;
+  
+  
+   if (twiceAsOldSon > dadYearsOld) {
+    return twiceAsOldSon - dadYearsOld;
+  } else if (dadYearsOld > twiceAsOldSon) {
+    return dadHowManyYears;
+  } else {
+    return 0;
+  }
+ 
+}
+
+
+// решение попроще и покороче
+function twiceAsOld(a, b) {
+  return a>2*b ? a-2*b : 2*b-a;
+}
