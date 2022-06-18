@@ -7,3 +7,22 @@ const checkTheBucket = (bucket) => {
 
 
 // Метод includes() определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false.
+
+//ИЛИ 
+function checkTheBucket(bucket) {  
+  
+  if (bucket.length == 0) {
+    return false;
+  }
+  var counter = 0;
+  for (var i = 0; i < bucket.length; i++){
+    if (bucket[i] == "gold") {
+      counter++
+    }    
+  }
+  if (counter >= 1) {
+  return true;
+  }
+  else return false;
+  
+}
