@@ -1,0 +1,9 @@
+const checkTheBucket = (bucket) => {
+  
+  
+    return bucket.includes("gold") ? true : false
+    
+}
+
+
+// Метод includes() определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false.
