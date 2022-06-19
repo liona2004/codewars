@@ -27,3 +27,14 @@ The (a,b)=>a-b comparison function subtracts the second item from the first item
 thus returning a negative value if the second item is bigger, a positive value if the second item is smaller, 
 and 0 for equality.
 */
+
+
+// или 
+function sumOfDifferences(arr) {
+  let sorted = arr.sort((a, b) => b - a)
+  let sum = 0;
+  for (let i = 0; i < sorted.length - 1; i++) {
+    sum += (arr[i] - arr[i + 1]);
+  }
+  return sum;
+}
