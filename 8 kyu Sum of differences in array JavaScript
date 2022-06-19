@@ -3,10 +3,27 @@ function sumOfDifferences(arr) {
   
   var sum = 0;
   for (var i = 1; i < arr.length; i++)  {
-    sum += (arr[i-1] - arr[i]); 
+    sum += (arr[i-1] - arr[i]);   /* начиная со второго элемента в массиве, например, 40 35 30 25 20 15 10 5 - будет первое вычитание происходить из 0(40) - 1(35), 
+    далее i увеличивается на 1 i++ становится индекс 2, индекс 2 - 1 = индекс 1, следует, 35 - 30 и так далее */
   }
   return sum;
       
 }
 
+/* Sort numerically because default is lexicographical sort
+The sort() method sorts the elements of an array in place and returns the sorted array
 
+If compareFunction is not supplied, all non-undefined array elements are sorted by converting them to strings
+In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9"
+
+We can use .sort((a,b)=>a-b) to sort an array of numbers in ascending numerical order or .sort((a,b)=>b-a) for descending order.
+
+compareFunction(a, b) return value	sort order
+> 0	                                sort a after b
+< 0	                                sort a before b
+=== 0	                              keep original order of a and b
+how comparison functions work: -1 for <, 0, and 1 for >
+The (a,b)=>a-b comparison function subtracts the second item from the first item, 
+thus returning a negative value if the second item is bigger, a positive value if the second item is smaller, 
+and 0 for equality.
+*/
