@@ -1,0 +1,21 @@
+function excludingVatPrice(price){
+  var percent = Math.round((price / 1.15) * 100) / 100;  // например, число 123 / 1.15 = 106,956521739 * 100 = 10695,6521739 округлили
+  if (price === null) {
+    return -1;
+  } else if (price > 0) {
+    return percent;
+  } else {
+    return 0;
+  }
+}
+
+
+/*
+You simply need to take the number of decimal places you want, multiply the floating point value by 10 raised to the power of that number, and then round. 
+That moves the decimal place, allowing you to round, and then you just divide by the factor of 10 that you had multiplied by.
+
+For example, if you want to round 0.507 to 1 decimal place, you multiply by 10 to get 5.07, round to get 5, then divide by 10 to get 0.5.
+
+Or, if you want to round 0.2345 to two decimal places, you need to round 23.45 (0.2345*100), then divide the result (23) by 100 to get 0.23.
+
+*/
